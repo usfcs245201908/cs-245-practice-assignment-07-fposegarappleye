@@ -96,33 +96,6 @@ class LinkedList<T> implements List<T> {
     prev.next = node.next;
     size--;
     return node.getData();
-    /*
-    if(pos == 0) {
-      Node<T> node = head;       // Use 'node' to capture head value
-      head = head.getNext(); // Overwrite head value with head's next
-      --size;
-      return node.getData();
-    } else {
-      // Keep to the node before the target
-      Node prev = head;
-      // Iterate along until finding the position
-      for(int i = 0 ; i < pos ; i++) { // NOTE: Possible -1 after pos here
-        prev = prev.getNext();
-      }
-      // Capture the focus item
-      Node<T> node = prev.getNext();
-      // Set prev.next to prev.next.next
-      prev.setNext(prev.getNext().getNext());
-      // Iterate size downward
-      --size;
-      // return the value
-      return node.getData();
-    }
-  }
-
-
-
-  */
   }
 
 }
